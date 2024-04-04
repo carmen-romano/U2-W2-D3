@@ -1,15 +1,92 @@
-@import url(/partials/_reset.scss);
-@import url(/partials/_spaziature.scss);
-@import url(/partials/_font.scss);
-@import url(/partials/_colori.scss);
-@import url(/partials/_bottoni.scss);
-@import url(/partials/_mixgenerici.scss);
-@import url(/partials/animazioni.scss);
-
-$main-color: red;
-$body-color:rgb(44, 44, 44);
-
+@import "./partials/_reset";
+@import "./partials/_spaziature";
+@import "./partials/_font";
+@import "./partials/_colori";
+@import "./partials/_bottoni";
+@import "./partials/_mixgenerici";
+@import "./partials/animazioni";
 
 body{
-    background-color: $body-color;
+    color: $text-color;
+    margin: 0;
+    font-size: map-get($font-sizes, medium);
 }
+header{
+    nav{animation: $animation-hero;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    padding: map-get($spacing-values, lg);
+    background-color: $bg-hero-color;
+    img:first-of-type{
+        max-width: 150px;
+    }
+    ul li{
+        display: inline-block;
+        margin-left: map-get($spacing-values, md);
+        cursor: pointer;
+    }
+}
+.hero{
+    background-color: $bg-hero-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    div:first-of-type{
+        animation: $animation-hero;
+        max-width: 50%;
+        h1{
+            font-size: map-get($font-sizes, extra-large);
+        }
+        p{
+            font-size: map-get($font-sizes, medium);
+        }
+    }
+}
+
+.imghero{
+    text-align: end;
+    max-width: 100%;
+    animation: $animation-fade-in
+}
+
+.btn {
+    cursor: pointer;
+    padding: 10px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    &:hover {
+        animation: $animation-btn
+      }
+}
+
+.btn1 {
+    @extend .btn;
+    background-color: $btn-color1;
+}
+
+.btn2 {
+    @extend .btn;
+    background-color: $btn-color2;
+}
+
+.btn3 {
+    @extend .btn;
+    background-color: $btn-color3;
+}
+main{
+    margin-top: 20px;
+    text-align: center;
+    img{
+        animation: $animation-hero;
+    width: 50%;
+    border-radius: 20px;
+}
+}
+
+
+
+

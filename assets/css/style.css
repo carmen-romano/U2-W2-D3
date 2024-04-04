@@ -1,10 +1,109 @@
-@import url(/partials/_reset.scss);
-@import url(/partials/_spaziature.scss);
-@import url(/partials/_font.scss);
-@import url(/partials/_colori.scss);
-@import url(/partials/_bottoni.scss);
-@import url(/partials/_mixgenerici.scss);
-@import url(/partials/animazioni.scss);
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes section-hero {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes button-hover {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 body {
-  background-color: rgb(44, 44, 44);
+  color: #f4f4f4;
+  margin: 0;
+  font-size: 1em;
+}
+
+header {
+  padding: 20px;
+  background-color: #640fc5;
+}
+header nav {
+  animation: section-hero 1s ease-in-out forwards;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header img:first-of-type {
+  max-width: 150px;
+}
+header ul li {
+  display: inline-block;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.hero {
+  background-color: #640fc5;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.hero div:first-of-type {
+  animation: section-hero 1s ease-in-out forwards;
+  max-width: 50%;
+}
+.hero div:first-of-type h1 {
+  font-size: 2em;
+}
+.hero div:first-of-type p {
+  font-size: 1em;
+}
+
+.imghero {
+  text-align: end;
+  max-width: 100%;
+  animation: fade-in 1s ease-in-out forwards;
+}
+
+.btn, .btn3, .btn2, .btn1 {
+  cursor: pointer;
+  padding: 10px;
+  width: 100px;
+  border-radius: 10px;
+  border: none;
+}
+.btn:hover, .btn3:hover, .btn2:hover, .btn1:hover {
+  animation: button-hover 0.5s forwards;
+}
+
+.btn1 {
+  background-color: #0e6cff;
+}
+
+.btn2 {
+  background-color: #ff8700;
+}
+
+.btn3 {
+  background-color: #4caf50;
+}
+
+main {
+  margin-top: 20px;
+  text-align: center;
+}
+main img {
+  animation: section-hero 1s ease-in-out forwards;
+  width: 50%;
+  border-radius: 20px;
 }/*# sourceMappingURL=style.css.map */
