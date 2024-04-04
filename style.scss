@@ -1,0 +1,15 @@
+@import url(/partials/_reset.scss);
+@import url(/partials/_spaziature.scss);
+@import url(/partials/_font.scss);
+@import url(/partials/_colori.scss);
+@import url(/partials/_bottoni.scss);
+@import url(/partials/_mixgenerici.scss);
+@import url(/partials/animazioni.scss);
+
+$main-color: red;
+$body-color:rgb(44, 44, 44);
+
+
+body{
+    background-color: $body-color;
+}
